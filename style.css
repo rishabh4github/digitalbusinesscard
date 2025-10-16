@@ -49,11 +49,12 @@ body{ background: linear-gradient(180deg, #f3f5f7, #edf1f3); }
 }
 
 /* FRONT */
-.front{
+.front {
   background:
     radial-gradient(160% 140% at 10% 0%, rgba(0,0,0,.04), transparent 45%),
-    linear-gradient(180deg, var(--paper-pure) 0%, var(--paper) 100%);
+    linear-gradient(180deg, #e7f0f2 0%, #e7f0f2 100%);
 }
+
 .front .front-wrap{
   position:relative;
   z-index:2;
