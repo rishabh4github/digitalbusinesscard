@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>Palak Midha — Digital Business Card</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <main class="stage">
+    <div class="card" role="button" aria-label="Flip card" tabindex="0">
+      <!-- FRONT -->
+      <section class="face front" aria-hidden="false">
+        <!-- Wavy background -->
+        <svg class="waves" viewBox="0 0 800 1200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#000" stop-opacity="0.04"/>
+              <stop offset="1" stop-color="#000" stop-opacity="0.02"/>
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#fade)" stroke-width="1.2" opacity="0.5">
+            <path d="M-50,120 C100,80 220,160 360,120 500,80 620,150 800,110" />
+            <path d="M-50,240 C120,200 220,260 360,230 520,200 640,270 820,230" />
+            <path d="M-50,360 C120,320 240,380 380,350 520,320 640,390 820,350" />
+            <path d="M-50,500 C120,460 240,520 380,490 540,460 660,530 840,490" />
+            <path d="M-50,640 C120,600 240,660 380,630 540,600 660,670 840,630" />
+            <path d="M-50,780 C120,740 240,800 380,770 540,740 660,810 840,770" />
+            <path d="M-50,920 C120,880 240,940 380,910 540,880 660,950 840,910" />
+            <path d="M-50,1060 C120,1020 240,1080 380,1050 540,1020 660,1090 840,1050" />
+          </g>
+        </svg>
+
+        <!-- Watermark logo -->
+        <div class="watermark">
+          <img src="assets/logo1.jpg" alt="Miduty watermark logo" />
+        </div>
+
+        <div class="front-wrap">
+          <div class="crest">
+            <img class="crest-logo" src="assets/logo2.png" alt="Miduty logo" />
+          </div>
+
+          <div class="identity">
+            <h1 class="name">Palak Midha</h1>
+            <p class="title">FOUNDER @ MIDUTY</p>
+          </div>
+
+          <div class="contact">
+            <p class="contact-row">
+              <i class="fa-solid fa-phone"></i>
+              <span>+971 50 872 8880</span>
+            </p>
+            <p class="contact-row">
+              <i class="fa-solid fa-envelope"></i>
+              <span>palakmidha@miduty.in</span>
+            </p>
+          </div>
+
+          <footer class="flip-hint" aria-hidden="true">
+            <i class="fa-solid fa-rotate"></i>
+            <span>Tap to flip</span>
+          </footer>
+        </div>
+      </section>
+
+      <!-- BACK -->
+      <section class="face back" aria-hidden="true">
+        <div class="back-wrap">
+          <div class="back-logo">
+            <img src="assets/logo.png" alt="Miduty logo" />
+          </div>
+
+          <footer class="flip-hint inverse" aria-hidden="true">
+            <i class="fa-solid fa-rotate"></i>
+            <span>Tap to flip</span>
+          </footer>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

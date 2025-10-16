@@ -1,17 +1,18 @@
-const saveContactBtn = document.querySelector('.save-contact');
+const card = document.querySelector('.card');
 
-saveContactBtn.addEventListener('click', function() {
-  const phoneNumber = '+1 123-456-7890';
-  const email = 'info@mrojey.com';
-  const company = 'Mrojey Technologies';
+function flip() {
+  card.classList.toggle('flipped');
+  const front = card.querySelector('.front');
+  const back = card.querySelector('.back');
+  const isFlipped = card.classList.contains('flipped');
+  front.setAttribute('aria-hidden', isFlipped ? 'true' : 'false');
+  back.setAttribute('aria-hidden', isFlipped ? 'false' : 'true');
+}
 
-  // Create a new contact object
-  const contact = new Contact();
-  contact.displayName = 'Mrojey';
-  contact.phoneNumbers = [new ContactField('mobile', phoneNumber)];
-  contact.emails = [new ContactField('work', email)];
-  contact.organizations = [new ContactOrganization(company)];
-
-  // Save the contact
-  navigator.contacts.save([contact]);
+card.addEventListener('click', flip);
+card.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    flip();
+  }
 });
