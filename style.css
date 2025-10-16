@@ -1,0 +1,58 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.card-container {
+  width: 300px;
+  height: 200px;
+  margin: 100px auto;
+  perspective: 1000px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-container.flip .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card-container.flip .card-back {
+  transform: rotateY(0deg);
+}
+
+.card-title {
+  font-size: 24px;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.qr-code {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  margin: 10px 0;
+}
